@@ -230,16 +230,6 @@ MYECOM CSS with LESS
     background-color: @darkblue;
   }
 
-  #mobile-menu {
-    margin: 7px;
-    .bar {
-      width: 32px;
-      height: 4px;
-      background-color: white;
-      margin: 6px 0;
-    }
-  }
-
   #website-title {
     width: 100vw;
     text-align: center;
@@ -329,6 +319,7 @@ MYECOM CSS with LESS
 
     #orders-list {
         margin-left: 8%;
+        margin-right: 8%;
         margin-top: 16px;
         h2 {
             font-size: 24px;
@@ -340,18 +331,22 @@ MYECOM CSS with LESS
         #table-head {
             display: none;
         }
-        #table-row {
+        .table-row {
             display: flex;
             justify-content: space-between;
             font-size: 1.6rem;
             font-family: @lato;
-            width: 92%;
             border-bottom: 1px solid @bordergray;
             padding-bottom: 16px;
             margin-top: 20px;
             button {
                 border: blue 1px solid;
                 padding: 6px 10px;
+            }
+            .light {
+                margin-top: 4px;
+                color: #B5B9C0;
+                font-weight: lighter;
             }
         }
         .table-date {
@@ -369,6 +364,16 @@ MYECOM CSS with LESS
 }
 
 .media-mixin(@break) when (@break = @tablet) {
+    #mobile-menu {
+        margin: 8px;
+        padding-left: 5px;
+        .bar {
+          width: 32px;
+          height: 4px;
+          background-color: white;
+          margin: 6px 0;
+        }
+      }
 
   #top-overview {
     margin-right: 8%;
@@ -390,14 +395,34 @@ MYECOM CSS with LESS
         font-size: 1.2em;
     }
   }
-  #orders-list {
+#orders-list {
+    #table-head {
+        margin-right: 14%;
+        font-family: @lato;
+        margin-top: 16px;
+        display: flex;
+        height: 20px;
+        font-size: 1.6rem;
+        justify-content: space-between;
+    }
+    .table-row {
+        justify-content: flex-start;
+    }
     .table-align {
         display: flex;
+    }
+    .left {
+        justify-content: space-between;
+        width: 60%;
+    }
+    .right {
+        justify-content: space-around;
+        width: 40%;
     }
     .table-date {
         display: block;
     }
-  }
+}
   footer {
         display: none;
     }

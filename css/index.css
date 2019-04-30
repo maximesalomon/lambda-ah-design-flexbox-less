@@ -146,15 +146,6 @@ MYECOM CSS with LESS
     display: flex;
     background-color: #193d72;
   }
-  #mobile-menu {
-    margin: 7px;
-  }
-  #mobile-menu .bar {
-    width: 32px;
-    height: 4px;
-    background-color: white;
-    margin: 6px 0;
-  }
   #website-title {
     width: 100vw;
     text-align: center;
@@ -235,6 +226,7 @@ MYECOM CSS with LESS
   }
   #orders-list {
     margin-left: 8%;
+    margin-right: 8%;
     margin-top: 16px;
   }
   #orders-list h2 {
@@ -246,19 +238,23 @@ MYECOM CSS with LESS
   #orders-list #table-head {
     display: none;
   }
-  #orders-list #table-row {
+  #orders-list .table-row {
     display: flex;
     justify-content: space-between;
     font-size: 1.6rem;
     font-family: "Lato", Helvetica, Arial;
-    width: 92%;
     border-bottom: 1px solid #eef0f3;
     padding-bottom: 16px;
     margin-top: 20px;
   }
-  #orders-list #table-row button {
+  #orders-list .table-row button {
     border: blue 1px solid;
     padding: 6px 10px;
+  }
+  #orders-list .table-row .light {
+    margin-top: 4px;
+    color: #B5B9C0;
+    font-weight: lighter;
   }
   #orders-list .table-date {
     display: none;
@@ -273,6 +269,16 @@ MYECOM CSS with LESS
   }
 }
 @media screen and (min-width: 600px) {
+  #mobile-menu {
+    margin: 8px;
+    padding-left: 5px;
+  }
+  #mobile-menu .bar {
+    width: 32px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+  }
   #top-overview {
     margin-right: 8%;
     display: flex;
@@ -292,8 +298,28 @@ MYECOM CSS with LESS
     padding-top: 0.6em;
     font-size: 1.2em;
   }
+  #orders-list #table-head {
+    margin-right: 14%;
+    font-family: "Lato", Helvetica, Arial;
+    margin-top: 16px;
+    display: flex;
+    height: 20px;
+    font-size: 1.6rem;
+    justify-content: space-between;
+  }
+  #orders-list .table-row {
+    justify-content: flex-start;
+  }
   #orders-list .table-align {
     display: flex;
+  }
+  #orders-list .left {
+    justify-content: space-between;
+    width: 60%;
+  }
+  #orders-list .right {
+    justify-content: space-around;
+    width: 40%;
   }
   #orders-list .table-date {
     display: block;
