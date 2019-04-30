@@ -292,55 +292,90 @@ MYECOM CSS with LESS
       color: white;
     }
   }
-}
 
-#top-orders {
-  display: flex;
-  width: 100%;
-  margin-top: 32px;
-  border-bottom: 1px solid @bordergray;
-}
+    #top-orders {
+        display: flex;
+        width: 100%;
+        margin-top: 32px;
+        border-bottom: 1px solid @bordergray;
+    }
 
-.orders-title {
-  margin-left: 8%;
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  color: #1f65e6;
-  padding-bottom: 8px;
-  border-bottom: solid 4px #1f65e6;
-}
+    .orders-title {
+        margin-left: 8%;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #1f65e6;
+        padding-bottom: 8px;
+        border-bottom: solid 4px #1f65e6;
+    }
 
-.orders-btn {
-  position: fixed;
-  right: 8%;
-  button {
-    font-family: "Lato";
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #1f65e6;
-    border: 2px solid #1f65e6;
-    background-color: white;
-  }
+    .orders-btn {
+        position: fixed;
+        right: 8%;
+        button {
+            font-family: "Lato";
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: #1f65e6;
+            border: 2px solid #1f65e6;
+            background-color: white;
+        }
+    }
+
+    #orders-list {
+        margin-left: 8%;
+        margin-top: 16px;
+        h2 {
+            font-size: 24px;
+            font-family: @lato;
+            color: @darkblue;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        #table-head {
+            display: none;
+        }
+        #table-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.6rem;
+            font-family: @lato;
+            width: 92%;
+            border-bottom: 1px solid @bordergray;
+            padding-bottom: 16px;
+            margin-top: 20px;
+            button {
+                border: blue 1px solid;
+                padding: 6px 10px;
+            }
+        }
+        .table-date {
+            display: none;
+        }
+    }
+    footer {
+        height: 56px;
+        background-color: @darkblue;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
 }
 
 .media-mixin(@break) when (@break = @tablet) {
-  nav {
-    background-color: green;
-  }
-  #container {
-    margin-right: 8%;
-  }
+
   #top-overview {
+    margin-right: 8%;
     display: flex;
     justify-content: space-between;
   }
   .tile {
-    background-color: green;
     min-width: 136px;
     min-height: 80px;
     width: 18vw;
@@ -355,9 +390,21 @@ MYECOM CSS with LESS
         font-size: 1.2em;
     }
   }
+  #orders-list {
+    .table-align {
+        display: flex;
+    }
+    .table-date {
+        display: block;
+    }
+  }
+  footer {
+        display: none;
+    }
 }
 
 .media-mixin(@break) when (@break = @laptop) {
+    
   header {
     display: flex;
     flex-direction: column-reverse;
@@ -433,6 +480,7 @@ MYECOM CSS with LESS
   #container {
       margin-left: 200px;
   }
+
   .tile {
     background-color: @darkblue;
   }

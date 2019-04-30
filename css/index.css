@@ -202,20 +202,83 @@ MYECOM CSS with LESS
     font-family: "Lato";
     color: white;
   }
+  #top-orders {
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+    border-bottom: 1px solid #eef0f3;
+  }
+  .orders-title {
+    margin-left: 8%;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1f65e6;
+    padding-bottom: 8px;
+    border-bottom: solid 4px #1f65e6;
+  }
+  .orders-btn {
+    position: fixed;
+    right: 8%;
+  }
+  .orders-btn button {
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #1f65e6;
+    border: 2px solid #1f65e6;
+    background-color: white;
+  }
+  #orders-list {
+    margin-left: 8%;
+    margin-top: 16px;
+  }
+  #orders-list h2 {
+    font-family: "Lato", Helvetica, Arial;
+    color: #193d72;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  #orders-list #table-head {
+    display: none;
+  }
+  #orders-list #table-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-family: "Lato", Helvetica, Arial;
+    width: 92%;
+    border-bottom: 1px solid #eef0f3;
+    padding-bottom: 16px;
+    margin-top: 20px;
+  }
+  #orders-list #table-row button {
+    border: blue 1px solid;
+    padding: 6px 10px;
+  }
+  #orders-list .table-date {
+    display: none;
+  }
+  footer {
+    height: 56px;
+    background-color: #193d72;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 }
 @media screen and (min-width: 600px) {
-  nav {
-    background-color: green;
-  }
-  #container {
-    margin-right: 8%;
-  }
   #top-overview {
+    margin-right: 8%;
     display: flex;
     justify-content: space-between;
   }
   .tile {
-    background-color: green;
     min-width: 136px;
     min-height: 80px;
     width: 18vw;
@@ -228,6 +291,15 @@ MYECOM CSS with LESS
   .tile .tile-info {
     padding-top: 0.6em;
     font-size: 1.2em;
+  }
+  #orders-list .table-align {
+    display: flex;
+  }
+  #orders-list .table-date {
+    display: block;
+  }
+  footer {
+    display: none;
   }
 }
 @media screen and (min-width: 900px) {
@@ -321,35 +393,4 @@ MYECOM CSS with LESS
 }
 :root {
   font-size: 62.5%;
-}
-#top-orders {
-  display: flex;
-  width: 100%;
-  margin-top: 32px;
-  border-bottom: 1px solid #eef0f3;
-}
-.orders-title {
-  margin-left: 8%;
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  color: #1f65e6;
-  padding-bottom: 8px;
-  border-bottom: solid 4px #1f65e6;
-}
-.orders-btn {
-  position: fixed;
-  right: 8%;
-}
-.orders-btn button {
-  font-family: "Lato";
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  color: #1f65e6;
-  border: 2px solid #1f65e6;
-  background-color: white;
 }
