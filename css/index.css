@@ -135,7 +135,7 @@ MYECOM CSS with LESS
     font-size: 2.4rem;
     font-style: italic;
     font-weight: bold;
-    color: #c1cad5;
+    color: #ffffff;
   }
   #sidebar {
     display: none;
@@ -144,7 +144,7 @@ MYECOM CSS with LESS
     width: 100%;
     height: 56px;
     display: flex;
-    background-color: #193d72;
+    background-color: #0150C3;
   }
   #website-title {
     width: 100vw;
@@ -173,7 +173,7 @@ MYECOM CSS with LESS
     width: 136px;
     height: 80px;
     margin-left: 8%;
-    background-color: #193d72;
+    background-color: #0150C3;
     border-radius: 4px;
   }
   .tile .tile-number {
@@ -231,7 +231,7 @@ MYECOM CSS with LESS
   }
   #orders-list h2 {
     font-family: "Lato", Helvetica, Arial;
-    color: #193d72;
+    color: #0150C3;
     font-weight: bold;
     font-size: 24px;
   }
@@ -261,7 +261,7 @@ MYECOM CSS with LESS
   }
   footer {
     height: 56px;
-    background-color: #193d72;
+    background-color: #0150C3;
     overflow: hidden;
     position: fixed;
     bottom: 0;
@@ -334,17 +334,18 @@ MYECOM CSS with LESS
     font-size: 2.4rem;
     font-style: italic;
     font-weight: bold;
-    color: #c1cad5;
+    color: #ffffff;
   }
   h5 {
     font-family: "Lato", Helvetica, Arial;
     font-size: 1.8rem;
+    font-weight: lighter;
   }
   h5 .profile-name {
-    color: #193d72;
+    color: #0150C3;
   }
   h5 #sidebar-list {
-    color: #c1cad5;
+    color: #ffffff;
   }
   header {
     display: flex;
@@ -365,7 +366,7 @@ MYECOM CSS with LESS
   }
   #website-title {
     width: 200px;
-    background-color: #193d72;
+    background-color: #0150C3;
     text-align: center;
   }
   #profile {
@@ -384,11 +385,11 @@ MYECOM CSS with LESS
     width: 200px;
     position: fixed;
     top: 56px;
-    background-color: #193d72;
+    background-color: #0150C3;
   }
   .sidebar-list {
     list-style-type: none;
-    color: #c1cad5;
+    color: #ffffff;
     margin-top: 32px;
   }
   .sidebar-list li {
@@ -404,7 +405,7 @@ MYECOM CSS with LESS
     bottom: 0px;
     margin-bottom: 20px;
     padding-top: 20px;
-    color: #c1cad5;
+    color: #ffffff;
     border-top: 1px solid #c1cad5;
   }
   .sidebar-logout h5 {
@@ -414,7 +415,7 @@ MYECOM CSS with LESS
     margin-left: 200px;
   }
   .tile {
-    background-color: #193d72;
+    background-color: #0150C3;
   }
 }
 :root {
