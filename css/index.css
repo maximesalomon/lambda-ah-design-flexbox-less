@@ -149,9 +149,13 @@ MYECOM CSS with LESS
   nav #website-title {
     width: 100vw;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 14px;
   }
-  nav #profile {
+  nav #profile .profile-picture {
+    margin-right: 10px;
+    margin-top: 7px;
+  }
+  nav #profile .profile-name {
     display: none;
   }
 }
