@@ -146,6 +146,15 @@ MYECOM CSS with LESS
     display: flex;
     background-color: #193D72;
   }
+  nav #mobile-menu {
+    margin: 7px;
+  }
+  nav #mobile-menu .bar {
+    width: 32px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+  }
   nav #website-title {
     width: 100vw;
     text-align: center;
