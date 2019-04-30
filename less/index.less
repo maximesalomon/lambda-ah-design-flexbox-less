@@ -5,56 +5,136 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
 
 /*******************
 MYECOM CSS with LESS
@@ -69,177 +149,193 @@ MYECOM CSS with LESS
 @tv: 1800px;
 
 @media screen and (max-width: @phone) {
-    .media-mixin(@phone);
+  .media-mixin(@phone);
 }
 
 @media screen and (min-width: @tablet) {
-    .media-mixin(@tablet);
+  .media-mixin(@tablet);
 }
 
 @media screen and (min-width: @laptop) {
-    .media-mixin(@laptop);
+  .media-mixin(@laptop);
 }
 
 @media screen and (min-width: @desktop) {
-    .media-mixin(@desktop);
+  .media-mixin(@desktop);
 }
 
 @media screen and (min-width: @tv) {
-    .media-mixin(@tv);
+  .media-mixin(@tv);
 }
 
 // FONT SETUP + VARIABLES
 
 :root {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
-@lato: 'Lato', Helvetica, Arial;
-@roboto: 'Roboto', 'Lato', Helvetica, Arial;
+@lato: "Lato", Helvetica, Arial;
+@roboto: "Roboto", "Lato", Helvetica, Arial;
 
 .media-mixin(@break) when (@break = @phone) {
-    h1 {
-        font-family: @lato;
-        font-size: 2.4rem;
-        font-style: italic;
-        font-weight: bold;
-        color: @textgray;
-    }
+  h1 {
+    font-family: @lato;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: bold;
+    color: @textgray;
+  }
 }
 
 .media-mixin(@break) when (@break = @laptop) {
-    h1 {
-        font-family: @lato;
-        font-size: 2.4rem;
-        font-style: italic;
-        font-weight: bold;
-        color: @textgray;
+  h1 {
+    font-family: @lato;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: bold;
+    color: @textgray;
+  }
+  h5 {
+    font-family: @lato;
+    font-size: 1.8rem;
+    .profile-name {
+      color: @darkblue;
     }
-    h5 {
-        font-family: @lato;
-        font-size: 1.8rem;
-        .profile-name {
-            color: @darkblue;
-        }
-        #sidebar-list {
-            color: @textgray;
-        }
+    #sidebar-list {
+      color: @textgray;
     }
+  }
 }
 
 // COLOR VARIABLES
 
-@darkblue: #193D72;
-@lightgray: #F8FAFD;
-@bordergray: #EEF0F3;
+@darkblue: #193d72;
+@lightgray: #f8fafd;
+@bordergray: #eef0f3;
 
-@textgray: #C1CAD5;
+@textgray: #c1cad5;
 
 // STYLE
 
 // PHONE SIDEBAR + NAVBAR
 .media-mixin(@break) when (@break = @phone) {
-    #sidebar {
+  #sidebar {
+    display: none;
+  }
+  nav {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    background-color: @darkblue;
+    #mobile-menu {
+      margin: 7px;
+      .bar {
+        width: 32px;
+        height: 4px;
+        background-color: white;
+        margin: 6px 0;
+      }
+    }
+    #website-title {
+      width: 100vw;
+      text-align: center;
+      margin-top: 14px;
+    }
+    #profile {
+      .profile-picture {
+        margin-right: 10px;
+        margin-top: 7px;
+      }
+      .profile-name {
         display: none;
+      }
     }
-    nav {
-        width: 100%;
-        height: 56px;
-        display: flex;
-        background-color: @darkblue;
-        #mobile-menu {
-            margin: 7px;
-            .bar {
-                width: 32px;
-                height: 4px;
-                background-color: white;
-                margin: 6px 0;
-            }
-        }
-        #website-title {
-            width: 100vw;
-            text-align: center;
-            margin-top: 14px;
-        }
-            #profile {
-                .profile-picture {
-                    margin-right: 10px;
-                    margin-top: 7px;
-                }
-                .profile-name {
-                    display: none;
-                }
-            }
-    }
+  }
+  main {
+      position: fixed;
+      top: 56px;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+  }
+  #top-overview {
+      margin-top: 16px;
+      display: flex;
+      .tile {
+          width: 136px;
+          height: 80px;
+          margin-left: 32px;
+          background-color: @darkblue;
+      }
+  }
 }
 
 .media-mixin(@break) when (@break = @tablet) {
-    nav {
-        background-color: green;
-    }
+  nav {
+    background-color: @darkblue;
+  }
 }
 
 .media-mixin(@break) when (@break = @laptop) {
-    header {
-        display: flex;
-        flex-direction: column-reverse;
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  nav {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    background-color: @lightgray;
+    border-bottom: solid 1px @bordergray;
+    z-index: -1;
+    position: sticky;
+    top: 0;
+    #website-title {
+      width: 200px;
+      background-color: @darkblue;
+      text-align: center;
+      padding-top: 10px;
     }
-    nav {
-        width: 100%;
-        height: 56px;
-        display: flex;
-        background-color: @lightgray;
-        border-bottom: solid 1px @bordergray;
-        z-index: -1;
-        position: sticky;
-        top: 0;
-        #website-title {
-            width: 200px;
-            background-color: @darkblue;
-            text-align: center;
-            padding-top: 10px;
-        }
-        #profile {
-            display: flex;
-            position: fixed;
-            right: 10px;
-            margin-top: 10px;
-            .profile-name {
-                margin-right: 10px;
-                margin-top: 10px;
-            }
-        }
+    #profile {
+      display: flex;
+      position: fixed;
+      right: 10px;
+      margin-top: 10px;
+      .profile-name {
+        margin-right: 10px;
+        margin-top: 10px;
+      }
     }
-    #sidebar {
-        height: 100vh;
-        width: 200px;
-        position: fixed;
-        top: 56px;
-        background-color: @darkblue;
-        .sidebar-list {
-            list-style-type: none;
-            color: @textgray;
-            margin-top: 32px;
-            li {
-                margin-bottom: 20px;
-                margin-left: 40px;
-                &:hover {
-                    color: white;
-                }
-            }
+  }
+  #sidebar {
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 56px;
+    background-color: @darkblue;
+    .sidebar-list {
+      list-style-type: none;
+      color: @textgray;
+      margin-top: 32px;
+      li {
+        margin-bottom: 20px;
+        margin-left: 40px;
+        &:hover {
+          color: white;
         }
-        .sidebar-logout {
-            position: fixed;
-            width: 200px;
-            bottom: 0px;
-            margin-bottom: 20px;
-            padding-top: 20px;
-            color: @textgray;
-            border-top: 1px solid #C1CAD5;
-            h5 {
-                padding-left: 40px;
-            }
-        }
+      }
     }
+    .sidebar-logout {
+      position: fixed;
+      width: 200px;
+      bottom: 0px;
+      margin-bottom: 20px;
+      padding-top: 20px;
+      color: @textgray;
+      border-top: 1px solid #c1cad5;
+      h5 {
+        padding-left: 40px;
+      }
+    }
+  }
 }
-
