@@ -129,7 +129,7 @@ table {
 /*******************
 MYECOM CSS with LESS
 *****************/
-@media screen and (max-width: 899px) {
+@media screen and (min-width: 0px) {
   h1 {
     font-family: "Lato", Helvetica, Arial;
     font-size: 2.4rem;
@@ -146,49 +146,46 @@ MYECOM CSS with LESS
     display: flex;
     background-color: #193d72;
   }
-  nav #mobile-menu {
+  #mobile-menu {
     margin: 7px;
   }
-  nav #mobile-menu .bar {
+  #mobile-menu .bar {
     width: 32px;
     height: 4px;
     background-color: white;
     margin: 6px 0;
   }
-  nav #website-title {
+  #website-title {
     width: 100vw;
     text-align: center;
-    margin-top: 14px;
+    padding-top: 14px;
   }
-  nav #profile .profile-picture {
+  #profile .profile-picture {
     margin-right: 10px;
     margin-top: 7px;
   }
-  nav #profile .profile-name {
+  #profile .profile-name {
     display: none;
   }
-  main {
-    top: 56px;
-  }
-  main #top-overview {
+  #top-overview {
     margin-top: 16px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  main #top-overview::-webkit-scrollbar {
+  #top-overview::-webkit-scrollbar {
     display: none;
   }
-  main #top-overview .tile {
+  .tile {
     flex: 0 0 auto;
     width: 136px;
     height: 80px;
-    margin-left: 32px;
+    margin-left: 8%;
     background-color: #193d72;
     border-radius: 4px;
   }
-  main #top-overview .tile .tile-number {
+  .tile .tile-number {
     width: 100%;
     text-align: center;
     padding-top: 20px;
@@ -196,7 +193,7 @@ MYECOM CSS with LESS
     font-family: "Lato";
     color: white;
   }
-  main #top-overview .tile .tile-info {
+  .tile .tile-info {
     width: 100%;
     text-align: center;
     padding-top: 12px;
@@ -208,7 +205,17 @@ MYECOM CSS with LESS
 }
 @media screen and (min-width: 600px) {
   nav {
-    background-color: #193d72;
+    background-color: green;
+  }
+  #container {
+    margin-right: 8%;
+  }
+  #top-overview {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tile {
+    background-color: green;
   }
 }
 @media screen and (min-width: 900px) {
@@ -233,6 +240,9 @@ MYECOM CSS with LESS
     display: flex;
     flex-direction: column-reverse;
   }
+  #mobile-menu {
+    display: none;
+  }
   nav {
     width: 100%;
     height: 56px;
@@ -243,42 +253,42 @@ MYECOM CSS with LESS
     position: sticky;
     top: 0;
   }
-  nav #website-title {
+  #website-title {
     width: 200px;
     background-color: #193d72;
     text-align: center;
-    padding-top: 10px;
   }
-  nav #profile {
+  #profile {
     display: flex;
     position: fixed;
     right: 10px;
-    margin-top: 10px;
   }
-  nav #profile .profile-name {
+  #profile .profile-name {
+    display: block;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   #sidebar {
+    display: block;
     height: 100vh;
     width: 200px;
     position: fixed;
     top: 56px;
     background-color: #193d72;
   }
-  #sidebar .sidebar-list {
+  .sidebar-list {
     list-style-type: none;
     color: #c1cad5;
     margin-top: 32px;
   }
-  #sidebar .sidebar-list li {
+  .sidebar-list li {
     margin-bottom: 20px;
     margin-left: 40px;
   }
-  #sidebar .sidebar-list li:hover {
+  .sidebar-list li:hover {
     color: white;
   }
-  #sidebar .sidebar-logout {
+  .sidebar-logout {
     position: fixed;
     width: 200px;
     bottom: 0px;
@@ -287,48 +297,44 @@ MYECOM CSS with LESS
     color: #c1cad5;
     border-top: 1px solid #c1cad5;
   }
-  #sidebar .sidebar-logout h5 {
+  .sidebar-logout h5 {
     padding-left: 40px;
   }
-  main {
+  #container {
     margin-left: 200px;
-  }
-  main #container {
-    margin-top: 48px;
-    margin-left: 10%;
-    width: 80%;
-    height: 100%;
-    height: 640px;
-  }
-  main #top-overview {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  main .tile {
-    width: 28%;
-    max-width: 480px;
-    height: 164px;
-    border-radius: 4px;
-    background-color: #193d72;
-  }
-  main .tile .tile-number {
-    margin-top: 40px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    font-size: 4.8rem;
-    font-family: "Lato", Helvetica, Arial;
-  }
-  main .tile .tile-info {
-    margin-top: 20px;
-    text-align: center;
-    font-weight: lighter;
-    color: #f8fafd;
-    font-size: 1.4rem;
-    font-family: "Lato", Helvetica, Arial;
   }
 }
 :root {
   font-size: 62.5%;
+}
+#top-orders {
+  display: flex;
+  width: 100%;
+  margin-top: 32px;
+  border-bottom: 1px solid #eef0f3;
+}
+.orders-title {
+  margin-left: 8%;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1f65e6;
+  padding-bottom: 8px;
+  border-bottom: solid 4px #1f65e6;
+}
+.orders-btn {
+  position: fixed;
+  right: 8%;
+}
+.orders-btn button {
+  font-family: "Lato";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #1f65e6;
+  border: 2px solid #1f65e6;
+  background-color: white;
 }

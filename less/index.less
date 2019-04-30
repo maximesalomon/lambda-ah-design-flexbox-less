@@ -142,14 +142,14 @@ MYECOM CSS with LESS
 
 // MIXINS MEDIA QUERIES
 
-@phone: 899px;
+@mobile: 0px;
 @tablet: 600px;
 @laptop: 900px;
 @desktop: 1200px;
 @tv: 1800px;
 
-@media screen and (max-width: @phone) {
-  .media-mixin(@phone);
+@media screen and (min-width: @mobile) {
+  .media-mixin(@mobile);
 }
 
 @media screen and (min-width: @tablet) {
@@ -177,7 +177,7 @@ MYECOM CSS with LESS
 @lato: "Lato", Helvetica, Arial;
 @roboto: "Roboto", "Lato", Helvetica, Arial;
 
-.media-mixin(@break) when (@break = @phone) {
+.media-mixin(@break) when (@break = @mobile) {
   h1 {
     font-family: @lato;
     font-size: 2.4rem;
@@ -218,82 +218,129 @@ MYECOM CSS with LESS
 // STYLE
 
 // PHONE SIDEBAR + NAVBAR
-.media-mixin(@break) when (@break = @phone) {
+.media-mixin(@break) when (@break = @mobile) {
   #sidebar {
     display: none;
   }
+
   nav {
     width: 100%;
     height: 56px;
     display: flex;
     background-color: @darkblue;
-    #mobile-menu {
-      margin: 7px;
-      .bar {
-        width: 32px;
-        height: 4px;
-        background-color: white;
-        margin: 6px 0;
-      }
-    }
-    #website-title {
-      width: 100vw;
-      text-align: center;
-      margin-top: 14px;
-    }
-    #profile {
-      .profile-picture {
-        margin-right: 10px;
-        margin-top: 7px;
-      }
-      .profile-name {
-        display: none;
-      }
+  }
+
+  #mobile-menu {
+    margin: 7px;
+    .bar {
+      width: 32px;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
     }
   }
-  main {
-    top: 56px;
-    #top-overview {
-      margin-top: 16px;
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      .tile {
-        flex: 0 0 auto;
-        width: 136px;
-        height: 80px;
-        margin-left: 32px;
-        background-color: @darkblue;
-        border-radius: 4px;
-        .tile-number {
-          width: 100%;
-          text-align: center;
-          padding-top: 20px;
-          font-size: 24px;
-          font-family: "Lato";
-          color: white;
-        }
-        .tile-info {
-          width: 100%;
-          text-align: center;
-          padding-top: 12px;
-          font-weight: lighter;
-          font-size: 12px;
-          font-family: "Lato";
-          color: white;
-        }
-      }
+
+  #website-title {
+    width: 100vw;
+    text-align: center;
+    padding-top: 14px;
+  }
+
+  #profile {
+    .profile-picture {
+      margin-right: 10px;
+      margin-top: 7px;
     }
+    .profile-name {
+      display: none;
+    }
+  }
+
+  #top-overview {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .tile {
+    flex: 0 0 auto;
+    width: 136px;
+    height: 80px;
+    margin-left: 8%;
+    background-color: @darkblue;
+    border-radius: 4px;
+    .tile-number {
+      width: 100%;
+      text-align: center;
+      padding-top: 20px;
+      font-size: 24px;
+      font-family: "Lato";
+      color: white;
+    }
+    .tile-info {
+      width: 100%;
+      text-align: center;
+      padding-top: 12px;
+      font-weight: lighter;
+      font-size: 12px;
+      font-family: "Lato";
+      color: white;
+    }
+  }
+}
+
+#top-orders {
+  display: flex;
+  width: 100%;
+  margin-top: 32px;
+  border-bottom: 1px solid @bordergray;
+}
+
+.orders-title {
+  margin-left: 8%;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1f65e6;
+  padding-bottom: 8px;
+  border-bottom: solid 4px #1f65e6;
+}
+
+.orders-btn {
+  position: fixed;
+  right: 8%;
+  button {
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #1f65e6;
+    border: 2px solid #1f65e6;
+    background-color: white;
   }
 }
 
 .media-mixin(@break) when (@break = @tablet) {
   nav {
-    background-color: @darkblue;
+    background-color: green;
+  }
+  #container {
+    margin-right: 8%;
+  }
+  #top-overview {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tile {
+    background-color: green;
   }
 }
 
@@ -302,6 +349,11 @@ MYECOM CSS with LESS
     display: flex;
     flex-direction: column-reverse;
   }
+
+  #mobile-menu {
+      display: none;
+  }
+
   nav {
     width: 100%;
     height: 56px;
@@ -311,90 +363,61 @@ MYECOM CSS with LESS
     z-index: -1;
     position: sticky;
     top: 0;
-    #website-title {
-      width: 200px;
-      background-color: @darkblue;
-      text-align: center;
-      padding-top: 10px;
-    }
-    #profile {
-      display: flex;
-      position: fixed;
-      right: 10px;
-      margin-top: 10px;
-      .profile-name {
+  }
+
+  #website-title {
+    width: 200px;
+    background-color: @darkblue;
+    text-align: center;
+  }
+
+  #profile {
+    display: flex;
+    position: fixed;
+    right: 10px;
+    .profile-name {
+        display: block;
         margin-right: 10px;
-        margin-top: 10px;
-      }
+        margin-top: 20px;
     }
   }
+
   #sidebar {
+    display: block;
     height: 100vh;
     width: 200px;
     position: fixed;
     top: 56px;
     background-color: @darkblue;
-    .sidebar-list {
-      list-style-type: none;
-      color: @textgray;
-      margin-top: 32px;
-      li {
-        margin-bottom: 20px;
-        margin-left: 40px;
-        &:hover {
-          color: white;
-        }
-      }
-    }
-    .sidebar-logout {
-      position: fixed;
-      width: 200px;
-      bottom: 0px;
+  }
+
+  .sidebar-list {
+    list-style-type: none;
+    color: @textgray;
+    margin-top: 32px;
+    li {
       margin-bottom: 20px;
-      padding-top: 20px;
-      color: @textgray;
-      border-top: 1px solid #c1cad5;
-      h5 {
-        padding-left: 40px;
+      margin-left: 40px;
+      &:hover {
+        color: white;
       }
     }
   }
-  main {
+
+  .sidebar-logout {
+    position: fixed;
+    width: 200px;
+    bottom: 0px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    color: @textgray;
+    border-top: 1px solid #c1cad5;
+    h5 {
+      padding-left: 40px;
+    }
+  }
+
+  #container {
       margin-left: 200px;
-    #container {
-        margin-top: 48px;
-        margin-left: 10%;
-        width: 80%;
-        height: 100%;
-        height: 640px;
-    }
-    #top-overview {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .tile {
-        width: 28%;
-        max-width: 480px;
-        height: 164px;
-        border-radius: 4px;
-        background-color: @darkblue;
-        .tile-number {
-            margin-top: 40px;
-            font-weight: bold;
-            text-align: center;
-            color: white;
-            font-size: 4.8rem;
-            font-family: @lato;
-        }
-        .tile-info {
-            margin-top: 20px;
-            text-align: center;
-            font-weight: lighter;
-            color: @lightgray;
-            font-size: 1.4rem;
-            font-family: @lato;
-        }
-    }
   }
 }
