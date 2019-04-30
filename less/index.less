@@ -252,21 +252,37 @@ MYECOM CSS with LESS
     }
   }
   main {
-      position: fixed;
-      top: 56px;
-      width: 100vw;
-      height: 100vh;
-      background-color: white;
-  }
-  #top-overview {
+    position: fixed;
+    top: 56px;
+    #top-overview {
       margin-top: 16px;
       display: flex;
+      flex-wrap: nowrap;
       .tile {
-          width: 136px;
-          height: 80px;
-          margin-left: 32px;
-          background-color: @darkblue;
+        width: 136px;
+        height: 80px;
+        margin-left: 32px;
+        background-color: @darkblue;
+        border-radius: 4px;
+        .tile-number {
+          width: 100%;
+          text-align: center;
+          padding-top: 20px;
+          font-size: 24px;
+          font-family: "Lato";
+          color: white;
+        }
+        .tile-info {
+          width: 100%;
+          text-align: center;
+          padding-top: 12px;
+          font-weight: lighter;
+          font-size: 12px;
+          font-family: "Lato";
+          color: white;
+        }
       }
+    }
   }
 }
 
@@ -336,6 +352,44 @@ MYECOM CSS with LESS
       h5 {
         padding-left: 40px;
       }
+    }
+  }
+  main {
+      margin-left: 200px;
+    #container {
+        margin-top: 48px;
+        margin-left: 10%;
+        width: 80%;
+        height: 100%;
+        height: 640px;
+    }
+    #top-overview {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .tile {
+        width: 28%;
+        max-width: 480px;
+        height: 164px;
+        border-radius: 4px;
+        background-color: @darkblue;
+        .tile-number {
+            margin-top: 40px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            font-size: 4.8rem;
+            font-family: @lato;
+        }
+        .tile-info {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: lighter;
+            color: @lightgray;
+            font-size: 1.4rem;
+            font-family: @lato;
+        }
     }
   }
 }

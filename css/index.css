@@ -170,19 +170,35 @@ MYECOM CSS with LESS
   main {
     position: fixed;
     top: 56px;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
   }
-  #top-overview {
+  main #top-overview {
     margin-top: 16px;
     display: flex;
+    flex-wrap: nowrap;
   }
-  #top-overview .tile {
+  main #top-overview .tile {
     width: 136px;
     height: 80px;
     margin-left: 32px;
     background-color: #193d72;
+    border-radius: 4px;
+  }
+  main #top-overview .tile .tile-number {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+    font-family: "Lato";
+    color: white;
+  }
+  main #top-overview .tile .tile-info {
+    width: 100%;
+    text-align: center;
+    padding-top: 12px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-family: "Lato";
+    color: white;
   }
 }
 @media screen and (min-width: 600px) {
@@ -268,6 +284,44 @@ MYECOM CSS with LESS
   }
   #sidebar .sidebar-logout h5 {
     padding-left: 40px;
+  }
+  main {
+    margin-left: 200px;
+  }
+  main #container {
+    margin-top: 48px;
+    margin-left: 10%;
+    width: 80%;
+    height: 100%;
+    height: 640px;
+  }
+  main #top-overview {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .tile {
+    width: 28%;
+    max-width: 480px;
+    height: 164px;
+    border-radius: 4px;
+    background-color: #193d72;
+  }
+  main .tile .tile-number {
+    margin-top: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 4.8rem;
+    font-family: "Lato", Helvetica, Arial;
+  }
+  main .tile .tile-info {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: lighter;
+    color: #f8fafd;
+    font-size: 1.4rem;
+    font-family: "Lato", Helvetica, Arial;
   }
 }
 :root {
