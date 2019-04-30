@@ -188,17 +188,17 @@ MYECOM CSS with LESS
   .tile .tile-number {
     width: 100%;
     text-align: center;
-    padding-top: 20px;
-    font-size: 24px;
+    padding-top: 0.8em;
+    font-size: 2.4em;
     font-family: "Lato";
     color: white;
   }
   .tile .tile-info {
     width: 100%;
     text-align: center;
-    padding-top: 12px;
+    padding-top: 0.6em;
     font-weight: lighter;
-    font-size: 12px;
+    font-size: 1.2em;
     font-family: "Lato";
     color: white;
   }
@@ -216,6 +216,18 @@ MYECOM CSS with LESS
   }
   .tile {
     background-color: green;
+    min-width: 136px;
+    min-height: 80px;
+    width: 18vw;
+    height: 10vw;
+  }
+  .tile .tile-number {
+    padding-top: 2.4vw;
+    font-size: 4vw;
+  }
+  .tile .tile-info {
+    padding-top: 0.6em;
+    font-size: 1.2em;
   }
 }
 @media screen and (min-width: 900px) {
@@ -302,6 +314,9 @@ MYECOM CSS with LESS
   }
   #container {
     margin-left: 200px;
+  }
+  .tile {
+    background-color: #193d72;
   }
 }
 :root {
