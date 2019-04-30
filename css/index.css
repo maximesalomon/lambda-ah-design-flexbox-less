@@ -167,6 +167,23 @@ MYECOM CSS with LESS
   nav #profile .profile-name {
     display: none;
   }
+  main {
+    position: fixed;
+    top: 56px;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+  }
+  #top-overview {
+    margin-top: 16px;
+    display: flex;
+  }
+  #top-overview .tile {
+    width: 136px;
+    height: 80px;
+    margin-left: 32px;
+    background-color: #193d72;
+  }
 }
 @media screen and (min-width: 600px) {
   nav {
