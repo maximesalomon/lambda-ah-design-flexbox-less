@@ -168,15 +168,20 @@ MYECOM CSS with LESS
     display: none;
   }
   main {
-    position: fixed;
     top: 56px;
   }
   main #top-overview {
     margin-top: 16px;
     display: flex;
     flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  main #top-overview::-webkit-scrollbar {
+    display: none;
   }
   main #top-overview .tile {
+    flex: 0 0 auto;
     width: 136px;
     height: 80px;
     margin-left: 32px;
