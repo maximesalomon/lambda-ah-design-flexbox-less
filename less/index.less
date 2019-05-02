@@ -160,6 +160,21 @@
       font-weight: bold;
       font-size: 24px;
     }
+    #table-head {
+      display: none; 
+    }
+    .table-row {
+      display: flex;
+      .table-left {
+        width: 45%;
+      }
+      .table-right {
+        width: 45%;
+      }
+      .table-id {
+        display: none;
+      }
+    }
   }
   footer {
     height: 56px;
@@ -201,16 +216,20 @@
     }
   }
   #orders-list {
-    
     #table-head, .table-row {
       display: flex;
-      .table-buyer {
-        background-color: red;
-        width: 26%;
+      .table-id {
+        display: block;
       }
-      .table-id, .table-date, .table-revenue, .table-status {
-        background-color: greenyellow;
-        width: 16%;
+      .table-left {
+        display: flex;
+        width: 50%;
+        background-color: red;
+      }
+      .table-right {
+        width: 40%;
+        display: flex;
+        background-color: blue;
       }
       .table-button {
         background-color: blueviolet;

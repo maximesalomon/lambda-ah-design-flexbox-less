@@ -237,6 +237,21 @@ footer {
     font-weight: bold;
     font-size: 24px;
   }
+  #orders-list #table-head {
+    display: none;
+  }
+  #orders-list .table-row {
+    display: flex;
+  }
+  #orders-list .table-row .table-left {
+    width: 45%;
+  }
+  #orders-list .table-row .table-right {
+    width: 45%;
+  }
+  #orders-list .table-row .table-id {
+    display: none;
+  }
   footer {
     height: 56px;
     background-color: #0150c3;
@@ -290,21 +305,21 @@ footer {
   #orders-list .table-row {
     display: flex;
   }
-  #orders-list #table-head .table-buyer,
-  #orders-list .table-row .table-buyer {
-    background-color: red;
-    width: 26%;
-  }
   #orders-list #table-head .table-id,
-  #orders-list .table-row .table-id,
-  #orders-list #table-head .table-date,
-  #orders-list .table-row .table-date,
-  #orders-list #table-head .table-revenue,
-  #orders-list .table-row .table-revenue,
-  #orders-list #table-head .table-status,
-  #orders-list .table-row .table-status {
-    background-color: greenyellow;
-    width: 16%;
+  #orders-list .table-row .table-id {
+    display: block;
+  }
+  #orders-list #table-head .table-left,
+  #orders-list .table-row .table-left {
+    display: flex;
+    width: 50%;
+    background-color: red;
+  }
+  #orders-list #table-head .table-right,
+  #orders-list .table-row .table-right {
+    width: 40%;
+    display: flex;
+    background-color: blue;
   }
   #orders-list #table-head .table-button,
   #orders-list .table-row .table-button {
