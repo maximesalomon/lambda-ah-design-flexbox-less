@@ -1,0 +1,99 @@
+// MOBILE
+.media-mixin(@break) when (@break = @mobile) {
+  #top-orders {
+    margin-left: 8%;
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
+    margin-top: 32px;
+    border-bottom: 1px solid @bordergray;
+  }
+  .orders-title {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1f65e6;
+    padding-bottom: 8px;
+    border-bottom: solid 4px #1f65e6;
+  }
+  .orders-btn {
+    button {
+      font-family: "Lato";
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #1f65e6;
+      border: 2px solid #1f65e6;
+      background-color: white;
+    }
+  }
+  #orders-list {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 16px;
+    h2 {
+      font-size: 24px;
+      font-family: @lato;
+      color: @darkblue;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    #table-head {
+      display: none;
+    }
+    .table-row {
+      display: flex;
+      font-family: @lato;
+      margin-top: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f0f1f2;
+      &:nth-child(1) {
+        margin-top: 20px;
+      }
+      .bold {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #5a616d;
+      }
+      .light {
+        font-size: 1.4rem;
+        font-weight: lighter;
+        color: #b5b9c0;
+      }
+      .table-left {
+        width: 50%;
+      }
+      .table-right {
+        width: 40%;
+      }
+      .table-date,
+      .table-status {
+        margin-top: 8px;
+      }
+      .table-id {
+        display: none;
+      }
+    }
+    .table-btn {
+      width: 20%;
+      border: 2px solid #1f65e6;
+    }
+  }
+}
+
+.media-mixin(@break) when (@break = @laptop) {
+  #container {
+    margin-left: 200px;
+  }
+  #orders-list {
+    .table-right .row {
+      padding-left: 20%;
+      &:nth-child(1) {
+        padding-left: 10%x;
+      }
+    }
+  }
+}
