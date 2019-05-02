@@ -11,17 +11,18 @@
     width: 200px;
     position: fixed;
     top: 56px;
-    background-color: @darkblue;
+    background-color: @bg-tertiary;
+    border-right: 1px solid @bordergray;
   }
   .sidebar-list {
     list-style-type: none;
-    color: @textgray;
+    color: @text-primary;
     margin-top: 32px;
     li {
       margin-bottom: 20px;
       margin-left: 40px;
       &:hover {
-        color: white;
+        font-weight: bold;
       }
     }
   }
@@ -31,8 +32,12 @@
     bottom: 0px;
     margin-bottom: 20px;
     padding-top: 20px;
-    color: @textgray;
-    border-top: 1px solid #c1cad5;
+    color: @text-primary;
+    border-top: 1px solid @bordergray;
+    border-right: 1px solid @bordergray;
+    &:hover {
+      font-weight: bold;
+    }
     h5 {
       padding-left: 40px;
     }

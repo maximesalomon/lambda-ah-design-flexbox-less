@@ -132,18 +132,19 @@ table {
     font-size: 2.4rem;
     font-style: italic;
     font-weight: bold;
-    color: #ffffff;
+    color: white;
   }
   nav {
     width: 100%;
     height: 56px;
     display: flex;
-    background-color: #0150c3;
+    background-color: #1F65E6;
   }
   #website-title {
     width: 100vw;
     text-align: center;
     padding-top: 14px;
+    color: #fff;
   }
   #profile .profile-picture {
     margin-right: 10px;
@@ -170,7 +171,7 @@ table {
     width: 136px;
     height: 80px;
     margin-left: 8%;
-    background-color: #0150c3;
+    background-color: #1F65E6;
     border-radius: 4px;
   }
   .tile .tile-number {
@@ -204,9 +205,9 @@ table {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
-    color: #1f65e6;
+    color: #1F65E6;
     padding-bottom: 8px;
-    border-bottom: solid 4px #1f65e6;
+    border-bottom: solid 4px #1F65E6;
   }
   .orders-btn button {
     font-family: "Lato";
@@ -214,8 +215,8 @@ table {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    color: #1f65e6;
-    border: 2px solid #1f65e6;
+    color: #1F65E6;
+    border: 2px solid #1F65E6;
     background-color: white;
   }
   #orders-list {
@@ -225,7 +226,7 @@ table {
   }
   #orders-list h2 {
     font-family: "Lato", Helvetica, Arial;
-    color: #0150c3;
+    color: #1F65E6;
     font-weight: bold;
     font-size: 24px;
   }
@@ -245,12 +246,12 @@ table {
   #orders-list .table-row .bold {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #5a616d;
+    color: #5A616D;
   }
   #orders-list .table-row .light {
     font-size: 1.4rem;
     font-weight: lighter;
-    color: #b5b9c0;
+    color: #5A616D;
   }
   #orders-list .table-row .table-left {
     width: 50%;
@@ -267,7 +268,8 @@ table {
   }
   #orders-list .table-btn {
     width: 20%;
-    border: 2px solid #1f65e6;
+    color: text-title;
+    border: 2px solid #1F65E6;
   }
 }
 @media screen and (min-width: 600px) {
@@ -278,7 +280,7 @@ table {
   #mobile-menu .bar {
     width: 32px;
     height: 4px;
-    background-color: white;
+    background-color: #fff;
     margin: 6px 0;
   }
   #top-overview {
@@ -300,6 +302,59 @@ table {
     padding-top: 0.6em;
     font-size: 1.2em;
   }
+  #orders-list #table-head,
+  #orders-list .table-row {
+    display: flex;
+  }
+  #orders-list #table-head .table-left .row,
+  #orders-list .table-row .table-left .row {
+    padding-left: 20%;
+  }
+  #orders-list #table-head .table-left .row:nth-child(1),
+  #orders-list .table-row .table-left .row:nth-child(1) {
+    padding-left: 0px;
+    font-weight: bold;
+  }
+  #orders-list #table-head .table-right .row,
+  #orders-list .table-row .table-right .row {
+    padding-left: 30%;
+  }
+  #orders-list #table-head .table-right .row:nth-child(1),
+  #orders-list .table-row .table-right .row:nth-child(1) {
+    padding-left: 10%;
+  }
+  #orders-list #table-head .bold,
+  #orders-list .table-row .bold,
+  #orders-list #table-head .light,
+  #orders-list .table-row .light {
+    font-size: 1.6rem;
+    font-weight: lighter;
+  }
+  #orders-list #table-head .table-date,
+  #orders-list .table-row .table-date,
+  #orders-list #table-head .table-status,
+  #orders-list .table-row .table-status {
+    margin-top: 0px;
+  }
+  #orders-list #table-head .table-id,
+  #orders-list .table-row .table-id {
+    display: block;
+  }
+  #orders-list #table-head .table-left,
+  #orders-list .table-row .table-left {
+    display: flex;
+    width: 50%;
+  }
+  #orders-list #table-head .table-right,
+  #orders-list .table-row .table-right {
+    width: 40%;
+    display: flex;
+  }
+  #orders-list #table-head .table-btn,
+  #orders-list .table-row .table-btn {
+    max-width: 72px;
+    max-height: 32px;
+  }
   footer {
     display: none;
   }
@@ -310,7 +365,7 @@ table {
     font-size: 2.4rem;
     font-style: italic;
     font-weight: bold;
-    color: #ffffff;
+    color: #5A616D;
   }
   h5 {
     font-family: "Lato", Helvetica, Arial;
@@ -318,14 +373,15 @@ table {
     font-weight: lighter;
   }
   h5 .profile-name {
-    color: #0150c3;
+    color: #1F65E6;
   }
   h5 #sidebar-list {
-    color: #ffffff;
+    color: #5A616D;
   }
   header {
     display: flex;
     flex-direction: column-reverse;
+    background-color: white;
   }
   #mobile-menu {
     display: none;
@@ -334,15 +390,14 @@ table {
     width: 100%;
     height: 56px;
     display: flex;
-    background-color: #f8fafd;
+    background-color: #fff;
     border-bottom: solid 1px #eef0f3;
-    z-index: -1;
     position: sticky;
     top: 0;
   }
   #website-title {
     width: 200px;
-    background-color: #0150c3;
+    background-color: #fff;
     text-align: center;
   }
   #profile {
@@ -361,11 +416,12 @@ table {
     width: 200px;
     position: fixed;
     top: 56px;
-    background-color: #0150c3;
+    background-color: #fff;
+    border-right: 1px solid #eef0f3;
   }
   .sidebar-list {
     list-style-type: none;
-    color: #ffffff;
+    color: #5A616D;
     margin-top: 32px;
   }
   .sidebar-list li {
@@ -373,7 +429,7 @@ table {
     margin-left: 40px;
   }
   .sidebar-list li:hover {
-    color: white;
+    font-weight: bold;
   }
   .sidebar-logout {
     position: fixed;
@@ -381,20 +437,18 @@ table {
     bottom: 0px;
     margin-bottom: 20px;
     padding-top: 20px;
-    color: #ffffff;
-    border-top: 1px solid #c1cad5;
+    color: #5A616D;
+    border-top: 1px solid #eef0f3;
+    border-right: 1px solid #eef0f3;
+  }
+  .sidebar-logout:hover {
+    font-weight: bold;
   }
   .sidebar-logout h5 {
     padding-left: 40px;
   }
-  #container {
-    margin-left: 200px;
-  }
-  #orders-list .table-right .row {
-    padding-left: 20%;
-  }
-  #orders-list .table-right .row:nth-child(1) {
-    padding-left: 10%x;
+  body {
+    background-color: #F6F9FF;
   }
   #container {
     margin-left: 200px;
@@ -405,7 +459,7 @@ table {
 }
 footer {
   height: 56px;
-  background-color: #0150c3;
+  background-color: #1F65E6;
   overflow: hidden;
   position: fixed;
   bottom: 0;

@@ -13,6 +13,12 @@
 // STYLE
 
 .media-mixin(@break) when (@break = @laptop) {
+  body {
+    background-color: @bg-secondary;
+  }
+}
+
+.media-mixin(@break) when (@break = @laptop) {
   #container {
     margin-left: 200px;
   }

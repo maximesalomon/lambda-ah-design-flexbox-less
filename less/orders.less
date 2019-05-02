@@ -14,9 +14,9 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
-    color: #1f65e6;
+    color: @text-title;
     padding-bottom: 8px;
-    border-bottom: solid 4px #1f65e6;
+    border-bottom: solid 4px @bg-primary;
   }
   .orders-btn {
     button {
@@ -25,8 +25,8 @@
       font-size: 16px;
       line-height: 19px;
       text-align: center;
-      color: #1f65e6;
-      border: 2px solid #1f65e6;
+      color: @text-title;
+      border: 2px solid @bg-primary;
       background-color: white;
     }
   }
@@ -37,7 +37,7 @@
     h2 {
       font-size: 24px;
       font-family: @lato;
-      color: @darkblue;
+      color: @text-title;
       font-weight: bold;
       font-size: 24px;
     }
@@ -56,12 +56,12 @@
       .bold {
         font-size: 1.6rem;
         font-weight: bold;
-        color: #5a616d;
+        color: @text-primary;
       }
       .light {
         font-size: 1.4rem;
         font-weight: lighter;
-        color: #b5b9c0;
+        color: @text-primary;
       }
       .table-left {
         width: 50%;
@@ -79,11 +79,56 @@
     }
     .table-btn {
       width: 20%;
-      border: 2px solid #1f65e6;
+      color: text-title;
+      border: 2px solid @bg-primary;
     }
   }
 }
 
+// TABLET
+.media-mixin(@break) when (@break = @tablet) {
+  #orders-list {
+    #table-head, .table-row {
+      display: flex;
+      .table-left .row {
+        padding-left: 20%;
+        &:nth-child(1) {
+          padding-left: 0px;
+          font-weight: bold;
+        }
+      }
+      .table-right .row {
+        padding-left: 30%;
+        &:nth-child(1) {
+          padding-left: 10%;
+        }
+      }
+      .bold, .light {
+        font-size: 1.6rem;
+        font-weight: lighter;
+      }
+      .table-date, .table-status {
+        margin-top: 0px;
+      }
+      .table-id {
+        display: block;
+      }
+      .table-left {
+        display: flex;
+        width: 50%;
+      }
+      .table-right {
+        width: 40%;
+        display: flex;
+      }
+      .table-btn {
+        max-width: 72px;
+        max-height: 32px;
+      }
+    }
+}
+
+// LAPTOP
 .media-mixin(@break) when (@break = @laptop) {
   #container {
     margin-left: 200px;
@@ -96,4 +141,5 @@
       }
     }
   }
+}
 }
