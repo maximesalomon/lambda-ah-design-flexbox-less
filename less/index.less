@@ -71,7 +71,7 @@
 
 // COLOR VARIABLES
 
-@darkblue: #0150C3;
+@darkblue: #0150c3;
 @lightgray: #f8fafd;
 @bordergray: #eef0f3;
 
@@ -79,12 +79,11 @@
 
 // STYLE
 
-// PHONE SIDEBAR + NAVBAR
+// PHONE
 .media-mixin(@break) when (@break = @mobile) {
   #sidebar {
     display: none;
   }
-
   #top-overview {
     margin-top: 16px;
     display: flex;
@@ -95,7 +94,6 @@
       display: none;
     }
   }
-
   .tile {
     flex: 0 0 auto;
     width: 136px;
@@ -121,99 +119,68 @@
       color: white;
     }
   }
-
-    #top-orders {
-        display: flex;
-        width: 100%;
-        margin-top: 32px;
-        border-bottom: 1px solid @bordergray;
+  #top-orders {
+    margin-left: 8%;
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
+    margin-top: 32px;
+    border-bottom: 1px solid @bordergray;
+  }
+  .orders-title {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1f65e6;
+    padding-bottom: 8px;
+    border-bottom: solid 4px #1f65e6;
+  }
+  .orders-btn {
+    button {
+      font-family: "Lato";
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #1f65e6;
+      border: 2px solid #1f65e6;
+      background-color: white;
     }
-
-    .orders-title {
-        margin-left: 8%;
-        font-family: "Lato";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 22px;
-        color: #1f65e6;
-        padding-bottom: 8px;
-        border-bottom: solid 4px #1f65e6;
+  }
+  #orders-list {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 16px;
+    h2 {
+      font-size: 24px;
+      font-family: @lato;
+      color: @darkblue;
+      font-weight: bold;
+      font-size: 24px;
     }
-
-    .orders-btn {
-        position: fixed;
-        right: 8%;
-        button {
-            font-family: "Lato";
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 19px;
-            text-align: center;
-            color: #1f65e6;
-            border: 2px solid #1f65e6;
-            background-color: white;
-        }
-    }
-
-    #orders-list {
-        margin-left: 8%;
-        margin-right: 8%;
-        margin-top: 16px;
-        h2 {
-            font-size: 24px;
-            font-family: @lato;
-            color: @darkblue;
-            font-weight: bold;
-            font-size: 24px;
-        }
-        #table-head {
-            display: none;
-        }
-        .table-row {
-            display: flex;
-            justify-content: space-between;
-            font-size: 1.6rem;
-            font-family: @lato;
-            border-bottom: 1px solid @bordergray;
-            padding-bottom: 16px;
-            margin-top: 20px;
-            button {
-                border: blue 1px solid;
-                padding: 6px 10px;
-            }
-            .light {
-                margin-top: 4px;
-                color: #B5B9C0;
-                font-weight: lighter;
-            }
-        }
-        .table-date {
-            display: none;
-        }
-    }
-    footer {
-        height: 56px;
-        background-color: @darkblue;
-        overflow: hidden;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
+  }
+  footer {
+    height: 56px;
+    background-color: @darkblue;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 }
-
 .media-mixin(@break) when (@break = @tablet) {
-    #mobile-menu {
-        margin: 8px;
-        padding-left: 5px;
-        .bar {
-          width: 32px;
-          height: 4px;
-          background-color: white;
-          margin: 6px 0;
-        }
-      }
-
+  #mobile-menu {
+    margin: 8px;
+    padding-left: 5px;
+    .bar {
+      width: 32px;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
+    }
+  }
   #top-overview {
     margin-right: 8%;
     display: flex;
@@ -225,60 +192,44 @@
     width: 18vw;
     height: 10vw;
     .tile-number {
-        padding-top: 2.4vw;
-        font-size: 4vw;
-
+      padding-top: 2.4vw;
+      font-size: 4vw;
     }
     .tile-info {
-        padding-top: 0.6em;
-        font-size: 1.2em;
+      padding-top: 0.6em;
+      font-size: 1.2em;
     }
   }
-  
-#orders-list {
-    #table-head {
-        margin-right: 14%;
-        font-family: @lato;
-        margin-top: 16px;
-        display: flex;
-        height: 20px;
-        font-size: 1.6rem;
-        justify-content: space-between;
-    }
-    .table-row {
-        justify-content: flex-start;
-    }
-    .table-align {
-        display: flex;
-    }
-    .left {
-        justify-content: space-between;
-        width: 60%;
-    }
-    .right {
-        justify-content: space-around;
-        width: 40%;
-    }
-    .table-date {
-        display: block;
-    }
-}
-  footer {
-        display: none;
-    }
-}
-
-.media-mixin(@break) when (@break = @laptop) {
+  #orders-list {
     
+    #table-head, .table-row {
+      display: flex;
+      .table-buyer {
+        background-color: red;
+        width: 26%;
+      }
+      .table-id, .table-date, .table-revenue, .table-status {
+        background-color: greenyellow;
+        width: 16%;
+      }
+      .table-button {
+        background-color: blueviolet;
+        width: 10%;
+      }
+    }
+  }
+  footer {
+    display: none;
+  }
+}
+.media-mixin(@break) when (@break = @laptop) {
   header {
     display: flex;
     flex-direction: column-reverse;
   }
-
   #mobile-menu {
-      display: none;
+    display: none;
   }
-
   nav {
     width: 100%;
     height: 56px;
@@ -289,24 +240,21 @@
     position: sticky;
     top: 0;
   }
-
   #website-title {
     width: 200px;
     background-color: @darkblue;
     text-align: center;
   }
-
   #profile {
     display: flex;
     position: fixed;
     right: 10px;
     .profile-name {
-        display: block;
-        margin-right: 10px;
-        margin-top: 20px;
+      display: block;
+      margin-right: 10px;
+      margin-top: 20px;
     }
   }
-
   #sidebar {
     display: block;
     height: 100vh;
@@ -315,7 +263,6 @@
     top: 56px;
     background-color: @darkblue;
   }
-
   .sidebar-list {
     list-style-type: none;
     color: @textgray;
@@ -328,7 +275,6 @@
       }
     }
   }
-
   .sidebar-logout {
     position: fixed;
     width: 200px;
@@ -341,11 +287,9 @@
       padding-left: 40px;
     }
   }
-
   #container {
-      margin-left: 200px;
+    margin-left: 200px;
   }
-
   .tile {
     background-color: @darkblue;
   }
