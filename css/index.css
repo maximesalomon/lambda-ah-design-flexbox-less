@@ -242,15 +242,40 @@ footer {
   }
   #orders-list .table-row {
     display: flex;
+    font-family: "Lato", Helvetica, Arial;
+    margin-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #F0F1F2;
+  }
+  #orders-list .table-row:nth-child(1) {
+    margin-top: 20px;
+  }
+  #orders-list .table-row .bold {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #5A616D;
+  }
+  #orders-list .table-row .light {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    color: #B5B9C0;
   }
   #orders-list .table-row .table-left {
-    width: 45%;
+    width: 50%;
   }
   #orders-list .table-row .table-right {
-    width: 45%;
+    width: 40%;
+  }
+  #orders-list .table-row .table-date,
+  #orders-list .table-row .table-status {
+    margin-top: 8px;
   }
   #orders-list .table-row .table-id {
     display: none;
+  }
+  #orders-list .table-btn {
+    width: 20%;
+    border: 2px solid #1F65E6;
   }
   footer {
     height: 56px;
@@ -305,6 +330,36 @@ footer {
   #orders-list .table-row {
     display: flex;
   }
+  #orders-list #table-head .table-left .row,
+  #orders-list .table-row .table-left .row {
+    padding-left: 20%;
+  }
+  #orders-list #table-head .table-left .row:nth-child(1),
+  #orders-list .table-row .table-left .row:nth-child(1) {
+    padding-left: 0px;
+  }
+  #orders-list #table-head .table-right .row,
+  #orders-list .table-row .table-right .row {
+    padding-left: 30%;
+  }
+  #orders-list #table-head .table-right .row:nth-child(1),
+  #orders-list .table-row .table-right .row:nth-child(1) {
+    padding-left: 10%;
+  }
+  #orders-list #table-head .bold,
+  #orders-list .table-row .bold,
+  #orders-list #table-head .light,
+  #orders-list .table-row .light {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #5A616D;
+  }
+  #orders-list #table-head .table-date,
+  #orders-list .table-row .table-date,
+  #orders-list #table-head .table-status,
+  #orders-list .table-row .table-status {
+    margin-top: 0px;
+  }
   #orders-list #table-head .table-id,
   #orders-list .table-row .table-id {
     display: block;
@@ -313,18 +368,16 @@ footer {
   #orders-list .table-row .table-left {
     display: flex;
     width: 50%;
-    background-color: red;
   }
   #orders-list #table-head .table-right,
   #orders-list .table-row .table-right {
     width: 40%;
     display: flex;
-    background-color: blue;
   }
-  #orders-list #table-head .table-button,
-  #orders-list .table-row .table-button {
-    background-color: blueviolet;
-    width: 10%;
+  #orders-list #table-head .table-btn,
+  #orders-list .table-row .table-btn {
+    max-width: 72px;
+    max-height: 32px;
   }
   footer {
     display: none;
@@ -450,6 +503,12 @@ footer {
   }
   .tile {
     background-color: #0150c3;
+  }
+  #orders-list .table-right .row {
+    padding-left: 20%;
+  }
+  #orders-list .table-right .row:nth-child(1) {
+    padding-left: 10%x;
   }
 }
 :root {

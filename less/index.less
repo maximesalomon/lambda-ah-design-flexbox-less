@@ -165,15 +165,39 @@
     }
     .table-row {
       display: flex;
+      font-family: @lato;
+      margin-top: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #F0F1F2;
+      &:nth-child(1) {
+        margin-top: 20px;
+      }
+      .bold {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #5A616D;
+      }
+      .light {
+        font-size: 1.4rem;
+        font-weight: lighter;
+        color: #B5B9C0;
+      }
       .table-left {
-        width: 45%;
+        width: 50%;
       }
       .table-right {
-        width: 45%;
+        width: 40%;
+      }
+      .table-date, .table-status {
+        margin-top: 8px;
       }
       .table-id {
         display: none;
       }
+    }
+    .table-btn {
+      width: 20%;
+        border: 2px solid #1F65E6;
     }
   }
   footer {
@@ -218,22 +242,40 @@
   #orders-list {
     #table-head, .table-row {
       display: flex;
+      .table-left .row {
+        padding-left: 20%;
+        &:nth-child(1) {
+          padding-left: 0px;
+        }
+      }
+      .table-right .row {
+        padding-left: 30%;
+        &:nth-child(1) {
+          padding-left: 10%;
+        }
+      }
+      .bold, .light {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #5A616D;
+      }
+      .table-date, .table-status {
+        margin-top: 0px;
+      }
       .table-id {
         display: block;
       }
       .table-left {
         display: flex;
         width: 50%;
-        background-color: red;
       }
       .table-right {
         width: 40%;
         display: flex;
-        background-color: blue;
       }
-      .table-button {
-        background-color: blueviolet;
-        width: 10%;
+      .table-btn {
+        max-width: 72px;
+        max-height: 32px;
       }
     }
   }
@@ -311,5 +353,13 @@
   }
   .tile {
     background-color: @darkblue;
+  }
+  #orders-list {
+    .table-right .row {
+      padding-left: 20%;
+      &:nth-child(1) {
+        padding-left: 10%x;
+      }
+    }
   }
 }
