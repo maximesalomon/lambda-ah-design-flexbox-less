@@ -1,39 +1,39 @@
 // FONT
 
 :root {
-    font-size: 62.5%;
+  font-size: 62.5%;
+}
+
+@lato: "Lato", Helvetica, Arial;
+@roboto: "Roboto", "Lato", Helvetica, Arial;
+
+.media-mixin(@break) when (@break = @mobile) {
+  h1 {
+    font-family: @lato;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: bold;
+    color: @textgray;
   }
-  
-  @lato: "Lato", Helvetica, Arial;
-  @roboto: "Roboto", "Lato", Helvetica, Arial;
-  
-  .media-mixin(@break) when (@break = @mobile) {
-    h1 {
-      font-family: @lato;
-      font-size: 2.4rem;
-      font-style: italic;
-      font-weight: bold;
+}
+
+.media-mixin(@break) when (@break = @laptop) {
+  h1 {
+    font-family: @lato;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: bold;
+    color: @textgray;
+  }
+  h5 {
+    font-family: @lato;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    .profile-name {
+      color: @darkblue;
+    }
+    #sidebar-list {
       color: @textgray;
     }
   }
-  
-  .media-mixin(@break) when (@break = @laptop) {
-    h1 {
-      font-family: @lato;
-      font-size: 2.4rem;
-      font-style: italic;
-      font-weight: bold;
-      color: @textgray;
-    }
-    h5 {
-      font-family: @lato;
-      font-size: 1.8rem;
-      font-weight: lighter;
-      .profile-name {
-        color: @darkblue;
-      }
-      #sidebar-list {
-        color: @textgray;
-      }
-    }
-  }
+}
